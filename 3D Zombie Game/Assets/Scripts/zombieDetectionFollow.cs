@@ -44,13 +44,13 @@ public class zombieDetectionFollow : MonoBehaviour
     {
         if (visible(Player))
         {
-            UnityEngine.Debug.Log("Player is visible in position" + Player.position);
+            //UnityEngine.Debug.Log("Player is visible in position" + Player.position);
             MoveEnemy();
         }
         else
         {
-            UnityEngine.
-                Debug.Log("No player in sight");
+            //UnityEngine.
+                //Debug.Log("No player in sight");
         }
     }
 

@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class AttackBox : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider other)
     {
+        
+
         //if the attack box trigger with enemy, it will reduce health by attackPower of the players.
-        if (collision.gameObject.CompareTag("Zombie"))
+        if (other.gameObject.CompareTag("Zombie"))
         {
             Debug.Log("Zombie Attacked!");
+            Destroy(other.gameObject);
         }
+        else
+            Debug.Log("player");
     }
+
 }

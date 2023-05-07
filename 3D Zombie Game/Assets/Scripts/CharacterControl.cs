@@ -24,6 +24,7 @@ public class CharacterControl : MonoBehaviour
     //Activate Attack Function
     public IEnumerator ActivateAttack()
     {
+        yield return new WaitForSeconds(attackDuration);
         attackBox.SetActive(true);
         //wait .5 sec
         yield return new WaitForSeconds(attackDuration);
